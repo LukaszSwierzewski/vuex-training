@@ -5,8 +5,12 @@ import App from './App.vue'
 import router from './router'
 import store from './store/store'
 import BaseIcon from '@/components/BaseIcon'
+import Vuelidate from 'vuelidate';
+import DateFilter from './filters/date';
 import 'nprogress/nprogress.css'
 
+Vue.use(Vuelidate);
+Vue.filter('date', DateFilter)
 Vue.component('BaseIcon', BaseIcon)
 
 Vue.config.productionTip = false
